@@ -1,7 +1,7 @@
 
 
 
-salom dunyo
+salom dunyo  salom
 welcome
 
 salom
