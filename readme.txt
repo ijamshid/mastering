@@ -1,7 +1,6 @@
 
 
 
-salom dunyo  salom
-welcome
 
-salom
+salom dunyo
+welcome to this project
