@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 namespace PDP;
 class Program
 {
@@ -68,3 +69,5 @@ class Logger
 
     }}
 
+=======
+>>>>>>> 840b0d3b7a62c52d03d91fe9179d6bcb3715b532
