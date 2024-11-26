@@ -1,0 +1,73 @@
+<<<<<<< HEAD
+namespace PDP;
+class Program
+{
+    static void Main(string[] args)
+    {
+
+        bool a = true;
+        while (a)
+        {
+            try
+            {
+                Console.Write("Username:");
+                string username = Console.ReadLine();
+                Console.Write("Password:");
+                string password = Console.ReadLine();
+                InvalidUserCredentialsException invalid = new InvalidUserCredentialsException();
+                invalid.UserName = username;
+                invalid.Password = password;
+                ValidateUser(invalid);
+                a = false;
+
+            }
+            catch (InvalidUserCredentialsException ex)
+
+            {
+                Logger logger = new Logger();
+                Console.Clear();
+                logger.LogError(ex.Code, ex.code);
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                if (!a)
+                    Console.WriteLine("welcome to this system");
+                Console.WriteLine("Session finished");
+            }
+        }
+    }
+
+    static void ValidateUser(InvalidUserCredentialsException user)
+    {
+        string Username = "Username";
+        string Password = "Password";
+        if (user.UserName != Username || user.Password != Password)
+        {
+            throw new InvalidUserCredentialsException();
+        }
+    }
+
+
+}
+
+
+class InvalidUserCredentialsException : Exception
+{
+    public string Code { get; } = "invalid_user_credentials";
+    public string UserName { get; set; }
+    public string code { get; } = "Invalid username or password";
+    public string Password { get; set; }
+
+}
+class Logger
+{
+    public void LogError(string code, string message)
+    {
+        DateTime time = DateTime.Now;
+        Console.WriteLine($"{time} ERR {code}: {message}");
+
+    }}
+
+=======
+>>>>>>> 840b0d3b7a62c52d03d91fe9179d6bcb3715b532
